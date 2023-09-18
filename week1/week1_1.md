@@ -48,7 +48,7 @@
   console.log(a)
   var a;
   a = 11;
-  console.laog(a);
+  console.log(a);
 ```
 ```
 undefined
