@@ -99,8 +99,13 @@ night = null;
 ```
 + string 타입으로 지정된 값을 null을 이용하여 값을 제거하는 방식으로 위의 사용법이 옳은 방법이라 생각한다.
 ### 과제 6-9 ECMAScript 사양은 문자열과 숫자 타입 외에는 명시적으로 규정하고 있지 않은데 그렇다면 해당 데이터 타입들은 외에는 어떤식으로 계산되고 있는가?
-+
-
+```JS
+console.log(true + true);//1
+console.log(true - true);//0
+console.log(true + false);//1
+console.log(true - false);//1
+console.log(null + null);//0
+```
 
 ### 과제 6-10 심벌 테이블 이라는 뜻을 알아보시오.
 + 컴파일러 또는 인터프리터와 같은 변환기에서 사용되는 데이터 구조
