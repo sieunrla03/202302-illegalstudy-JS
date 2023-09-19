@@ -203,6 +203,17 @@ function solution(angle) {
         return 4;
 }
 ```
+https://school.programmers.co.kr/learn/courses/30/lessons/120815
+<img width="616" alt="image" src="https://github.com/sieunrla03/202302-illegalstudy-JS/assets/106252274/98b1487b-fdda-40a5-b440-bd23583294a6">
+```JS
+function solution(n) {
+    let pizza = 6;
+    for(let i=1;i<=n;i++){
+        if(pizza*i%n==0)
+            return i
+    }
+}
+```
 
 
 
