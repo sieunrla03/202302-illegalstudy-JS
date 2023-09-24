@@ -134,3 +134,10 @@ Uncaught SyntaxError: Unexpected string
 
 
 ## 단축평가에 대한 추가 과제
+```JS
+var answer = false;
+var message = '';
+if (answer) message = 'F'
+message = false || 'F';
+console.log(message);
+```
