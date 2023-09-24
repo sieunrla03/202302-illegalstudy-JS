@@ -1,7 +1,7 @@
 # 9장 타입 변환과 단축 평가
 ### 과제 9-1 암묵적 타입 변환이 무조건적으로 좋지 않은 문화이자 기능인가?
 무조건적으로 좋지 않다고는 생각하지 않지만 사용하지 않는 쪽이 더 좋다고 생각한다. 
-개발자의 의도와 관계없이 JS엔진에 의해 타입이 자동 변환되는 것은 어떠한 상환에서 혼란을 초래할 수도 있다고 생각한다.
+개발자의 의도와 관계없이 JS엔진에 의해 타입이 자동 변환되는 것은 어떠한 상황에서 혼란을 초래할 수도 있다고 생각한다.
 특히 팀 협업인 경우에는 코드 관리에 예상치 못한 어려움을 줄 수 있다고 생각된다.
 
 # 9장 단축 평가 (심화)
@@ -73,3 +73,64 @@ console.log(duplicateObj);
 //실행결과 {name: 'kim'}
 //==============================================
 ```
+
+### 과제 10-2 브라우저 환경과 Node.js 환경을 준비하고 아래의 코드를 돌려봅니다.
+```JS
+var wind = {
+  'last-name' : 'park',
+  1: 10
+};
+
+wind.'last-name';
+wind.last-name;
+
+wind[last-name];
+wind['last-name'];
+
+wind.1;
+wind.'1';
+wind[1];
+wind['1']
+```
+```JS
+//실행결과 
+Welcome to Node.js v18.16.0.
+Type ".help" for more information.
+> var wind = {
+...   'last-name' : 'park',
+...   1: 10
+... };
+undefined
+>
+> wind.'last-name';
+wind.'last-name';
+     ^^^^^^^^^^^
+
+Uncaught SyntaxError: Unexpected string
+> wind.last-name;
+Uncaught ReferenceError: name is not defined
+>
+> wind[last-name];
+Uncaught ReferenceError: last is not defined
+> wind['last-name'];
+'park'
+>
+> wind.1;
+wind.1;
+    ^^
+
+Uncaught SyntaxError: Unexpected number
+> wind.'1';
+wind.'1';
+     ^^^
+
+Uncaught SyntaxError: Unexpected string
+> wind[1];
+10
+> wind['1']
+10
+```
+## 추가과제 반복문과 조건문 이용한 프로그램 짜기
+
+
+## 단축평가에 대한 추가 과제
