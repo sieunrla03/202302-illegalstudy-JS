@@ -131,7 +131,22 @@ Uncaught SyntaxError: Unexpected string
 10
 ```
 ## 추가과제 반복문과 조건문 이용한 프로그램 짜기
+for문을 이용한 별찍기 - 피라미드
+```JS
+//코드
+let triangle = '';
 
+for (let i = 0; i < 6; i++) {
+    for (let j = 1; j < 6 - i; j++) {
+        triangle += ' ';
+    }
+    for (let j = 0; j < 2 * (i + 1) - 1; j++) {
+        triangle += '*';
+    }
+    triangle += '\n'
+}
+console.log(triangle);
+```
 
 ## 단축평가에 대한 추가 과제
 ```JS
@@ -140,4 +155,5 @@ var message = '';
 if (answer) message = 'F'
 message = false || 'F';
 console.log(message);
+//실행결과 F
 ```
