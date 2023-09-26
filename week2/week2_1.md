@@ -94,7 +94,41 @@ wind['1']
 ```
 ```JS
 //실행결과 
+Welcome to Node.js v18.16.0.
+Type ".help" for more information.
+> var wind = {
+...   'last-name' : 'park',
+...   1: 10
+... };
+undefined
+>
+> wind.'last-name';
 wind.'last-name';
+     ^^^^^^^^^^^
+
+Uncaught SyntaxError: Unexpected string
+> wind.last-name;
+Uncaught ReferenceError: name is not defined
+>
+> wind[last-name];
+Uncaught ReferenceError: last is not defined
+> wind['last-name'];
+'park'
+>
+> wind.1;
+wind.1;
+    ^^
+
+Uncaught SyntaxError: Unexpected number
+> wind.'1';
+wind.'1';
+     ^^^
+
+Uncaught SyntaxError: Unexpected string
+> wind[1];
+10
+> wind['1']
+10
 ```
 ## 추가과제 반복문과 조건문 이용한 프로그램 짜기
 for문을 이용한 별찍기 - 피라미드
